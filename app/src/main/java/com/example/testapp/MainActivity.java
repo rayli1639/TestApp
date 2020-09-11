@@ -33,10 +33,12 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+
     public static void testMethod() {
     }
 
     public static void anotherTestMethod() {
 
     }
+
 }
