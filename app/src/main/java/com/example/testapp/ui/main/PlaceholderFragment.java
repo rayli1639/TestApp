@@ -48,20 +48,28 @@ public class PlaceholderFragment extends Fragment {
     public View onCreateView(
             @NonNull LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState) {
-        View root = inflater.inflate(R.layout.fragment_main, container, false);
-        Button addButton = root.findViewById(R.id.addButton);
-        addButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                EditText num1 = getActivity().findViewById(R.id.EditText);
-                EditText num2 = getActivity().findViewById(R.id.EditText2);
-                TextView result = getActivity().findViewById(R.id.resultTextView);
-                int n1 = Integer.parseInt(num1.getText().toString());
-                int n2 = Integer.parseInt(num2.getText().toString());
-                int r = n1 + n2;
-                result.setText(r + "");
-            }
-        });
+        final View root;
+        if (pageViewModel.getIndex() == 1) {
+            root = inflater.inflate(R.layout.fragment_main, container, false);
+        }
+        else{
+            root = inflater.inflate(R.layout.fragment_fragment2,container,false);
+        }
+        if (pageViewModel.getIndex() == 1) {
+            Button addButton = root.findViewById(R.id.addButton);
+            addButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    EditText num1 = root.findViewById(R.id.EditText);
+                    EditText num2 = root.findViewById(R.id.EditText2);
+                    TextView result = root.findViewById(R.id.resultTextView);
+                    int n1 = Integer.parseInt(num1.getText().toString());
+                    int n2 = Integer.parseInt(num2.getText().toString());
+                    int r = n1 + n2;
+                    result.setText(r + "");
+                }
+            });
+        }
         final TextView textView = root.findViewById(R.id.section_label);
         pageViewModel.getText().observe(this, new Observer<String>() {
             @Override
