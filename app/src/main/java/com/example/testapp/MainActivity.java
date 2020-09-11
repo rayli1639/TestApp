@@ -34,10 +34,26 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> 384505c2aeae6b0041c240f85144d4f40e48fc9d
+
     public static void testMethod() {
     }
 
+<<<<<<< HEAD
+    public static void anotherTestMethod() {
+
+    }
+
+=======
     public static void raysTestMethod(){
 
     }
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> d2a68d14827687ce850109048e4fccc244327642
+>>>>>>> 384505c2aeae6b0041c240f85144d4f40e48fc9d
+>>>>>>> f8c0ef799428a93850a6a009796a6abc4ebbe34e
 }
