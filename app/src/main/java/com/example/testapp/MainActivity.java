@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-<<<<<<< HEAD
+
 
     public static void testMethod() {
     }
@@ -40,6 +40,4 @@ public class MainActivity extends AppCompatActivity {
     public static void raysTestMethod(){
 
     }
-=======
->>>>>>> d2a68d14827687ce850109048e4fccc244327642
 }
